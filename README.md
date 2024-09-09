@@ -1,6 +1,3 @@
-Here’s a structured and detailed README file for your GitHub repository:
-
----
 
 # Power Consumption in India (2019-20) Analytics
 
