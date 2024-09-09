@@ -7,7 +7,7 @@
 
 import pandas as pd
 import numpy as np
-df = pd.read_csv("dataset_tk.csv")
+df = pd.read_csv("/content/drive/MyDrive/dataset_tk.csv")
 df.head()
 
 
@@ -170,7 +170,7 @@ print(df.isnull().sum())
 
 import pandas as pd
 import numpy as np
-df2 = pd.read_csv("dataset_tk.csv")
+df2 = pd.read_csv("/content/drive/MyDrive/dataset_tk.csv")
 
 
 # In[29]:
@@ -233,7 +233,7 @@ pip install fancyimpute
 
 import pandas as pd
 import numpy as np
-df = pd.read_csv("dataset_tk.csv")
+df = pd.read_csv("/content/drive/MyDrive/dataset_tk.csv")
 df
 
 
@@ -285,7 +285,7 @@ import numpy as np
 # In[7]:
 
 
-df = pd.read_csv('dataset_tk.csv')
+df = pd.read_csv('/content/drive/MyDrive/dataset_tk.csv')
 df.head()
 
 
@@ -334,8 +334,8 @@ df['J&K'].head(25)
 
 unwanted_characters = ['[', ',', '-']
 defclean_dates(item):
-    dop= str(item.loc['J&K'])
-                      if dop == 'nan'or dop[0] == '[':
+dop= str(item.loc['J&K'])
+if dop == 'nan'or dop[0] == '[':
         return np.NaN
     for character in unwanted_characters:
         if character in dop:          
@@ -360,14 +360,14 @@ df.head()
 # In[24]:
 
 
-get_ipython().system('more dataset_tk.csv')
+get_ipython().system('more /content/drive/MyDrive/dataset_tk.csv')
 
 
 # In[27]:
 
 
 dataset_tk = []
-withopen('dataset_tk.csv', 'r') as file: 
+withopen('/content/drive/MyDrive/dataset_tk.csv', 'r') as file: 
     items = file.readlines() 
     states = list(filter(lambda x: '[edit]'in x, items))
     for index, state inenumerate(states):  
@@ -388,14 +388,14 @@ Renaming columns and skipping rows
 # In[28]:
 
 
-dataset_tk_df = pd.read_csv('dataset_tk.csv')
+dataset_tk_df = pd.read_csv('/content/drive/MyDrive/dataset_tk.csv')
 dataset_tk_df.head()
 
 
 # In[29]:
 
 
-dataset_tk_df = pd.read_csv('dataset_tk.csv', skiprows = 3, header = 0)
+dataset_tk_df = pd.read_csv('/content/drive/MyDrive/dataset_tk.csv', skiprows = 3, header = 0)
 dataset_tk_df.head()
 
 
@@ -424,7 +424,7 @@ Box -whisker plot and quartile
 import pandas as pd
 import numpy as np
 import matplotlib.pyplot as plt
-df = pd.read_csv("dataset_tk.csv")
+df = pd.read_csv("/content/drive/MyDrive/dataset_tk.csv")
 print(df.shape)
 print(df.info())
 
